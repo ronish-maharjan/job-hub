@@ -73,6 +73,9 @@ class InMemoryDatabase implements JobRepository{
         })
         return jobs;
     }
+    async delete():Promise<boolean>{
+        return true;
+    }
 };
 
 export {InMemoryDatabase};

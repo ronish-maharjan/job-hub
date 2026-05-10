@@ -14,7 +14,7 @@ class JobMapper {
     static toDomain(raw:JobRecord){
         const skillsInString = raw.skills;
         const skillsInArray = skillsInString.split(" ")
-        const formattedData = {jobId:raw.job_id,company:raw.company,location:raw.location,position:raw.position,skills:skillsInArray,salary:raw.salary,applyUrl:raw.apply_url,createdAt:raw.created_At};
+        const formattedData = {jobId:raw.job_id,company:raw.company,location:raw.location,position:raw.position,skills:skillsInArray,salary:raw.salary,applyUrl:raw.apply_url,createdAt:raw.created_at};
         const jobResult = Job.hydrate(formattedData);
         if(!jobResult.success)throw jobResult.error;
         return jobResult.data;

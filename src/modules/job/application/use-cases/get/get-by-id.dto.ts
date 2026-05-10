@@ -6,9 +6,9 @@ type GetByIdResponse = {
     location:string,
     position:string,
     skills:string[],
-    applyLink:string,
+    applyUrl:string,
     salary:number,
-    createdAt:Date
+    createdAt?:Date
 }
 
 export {GetByIdInput,GetByIdResponse}
