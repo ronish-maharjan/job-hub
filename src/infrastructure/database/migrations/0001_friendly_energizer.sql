@@ -1,0 +1,1 @@
+ALTER TABLE "job" ADD COLUMN "apply_url" varchar(256) NOT NULL;
